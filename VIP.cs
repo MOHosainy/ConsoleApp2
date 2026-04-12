@@ -13,7 +13,7 @@ namespace ConsoleApp2
         {
             return new VIP
             {
-                isBooked = this.isBooked,
+                isBooked =  this.isBooked,
 
             };
         }
