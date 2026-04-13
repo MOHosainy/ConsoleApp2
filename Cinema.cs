@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp2
 {
-    public class Cinema 
+    partial class Cinema 
     {
          List <Iprintable> Tickets = new List<Iprintable>();
         public void PrintAllTickets()
@@ -17,5 +17,12 @@ namespace ConsoleApp2
 
             }
         }
+
+     
+
+    public void ShowStatistics()
+    {
+        Console.WriteLine($"Total Tickets: {Tickets.Count}");
+    }
     }
 }

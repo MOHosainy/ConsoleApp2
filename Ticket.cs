@@ -10,6 +10,21 @@ namespace ConsoleApp2
     {
         protected bool isBooked=false;
 
+        public int Id { get; set; }
+        public int BasePrice { get; set; }
+        public string MovieName { get; set; }
+
+        public Ticket(int id,int basePrice, string movieName)
+        {
+            Id= id;
+            BasePrice= basePrice;
+            MovieName= movieName;
+        }
+
+        public abstract double calculate();
+
+
+
         public abstract Ticket clone(); 
 
 

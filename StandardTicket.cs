@@ -14,6 +14,18 @@ namespace ConsoleApp2
         //    Console.WriteLine("Status: " + (isBooked ? "Booked" : "Not Booked"));
         //}
 
+
+        public StandardTicket(int id, int basePrice, string movieName):base(id, basePrice, movieName) 
+        {
+            
+        }
+        public override double calculate() { return BasePrice; }
+
+        public override Ticket clone()
+        {
+            throw new NotImplementedException();
+        }
+
         public override void print()
         {
             throw new NotImplementedException();

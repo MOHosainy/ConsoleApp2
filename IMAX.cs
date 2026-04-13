@@ -7,12 +7,21 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp2
 {
-    internal class IMAX : Ticket
+    public class IMAX : Ticket
     {
+        public IMAX(int id, int basePrice, string movieName) : base(id, basePrice, movieName)
+        {
+        }
+
+        public override double calculate()
+        {
+            throw new NotImplementedException();
+        }
+
         public override Ticket clone()
         {
 
-            return new IMAX
+            return new IMAX(2,4,"fd")
             {
                 isBooked = this.isBooked,
                 //movieName=
