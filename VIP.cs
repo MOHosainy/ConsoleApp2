@@ -7,26 +7,30 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp2
 {
-    internal class VIP : Ticket
+    public class VIP : Ticket
     {
         public override Ticket clone()
         {
-            return new VIP
+            return new VIP(1,2,"s")
             {
                  isBooked =  this.isBooked,
 
             };
         }
 
-        //public override void Print()
-        //{
-        //    Console.WriteLine("VIP Ticket");
-        //    Console.WriteLine("Status: " + (isBooked ? "Booked" : "Not Booked"));
-        //}
+      public VIP(int id,int basePrice,string movieName) :base(id,basePrice,movieName) 
+        {
+
+        }
 
         public override void print()
         {
             Console.WriteLine("Status: " + (isBooked ? "Booked" : "Not Booked"));
+        }
+
+        public override double calculate()
+        {
+            throw new NotImplementedException();
         }
     }
 }
